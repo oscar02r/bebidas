@@ -1,14 +1,20 @@
 import React from 'react';
 import Header from './components/Header';
-import Formulario from './components/tu';
+import Formulario from './components/Formulario';
+import CategoriasProvider from './context/CategoriaContext';
 
 function App() {
   return (
-    <>
-      
-      <Formulario/>
-    
-    </>
+    <CategoriasProvider>
+       <Header/>
+       <div className="container mt-5">
+         <div className="row">
+
+            <Formulario/>
+         </div>
+       </div>
+        
+    </CategoriasProvider>
   );
 }
 
